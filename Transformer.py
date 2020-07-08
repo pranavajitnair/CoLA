@@ -33,7 +33,6 @@ class Embeddings(nn.Module):
                         rep=self.token_embeds(input)
                 pos=self.pos_embeds(pos)
                 
-                
                 output=self.layer_norm(rep+pos)
                 output=self.project(output)
                 
